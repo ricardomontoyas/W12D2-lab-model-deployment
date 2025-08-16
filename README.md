@@ -1,7 +1,10 @@
 
-Built Web APP:https://w12d2-lab-model-deployment.onrender.com/predict
+## SOLUTION - WEB APP:
+
+https://w12d2-lab-model-deployment.onrender.com/
 
 
+---------------------------------
 
 # Build a Web App to use a ML Model
 
