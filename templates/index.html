@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🛸 UFO Appearance Prediction! 👽</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="grid">
+    <div class="box">
+      <h1>UFO Country Prediction</h1>
+      <p>Based on the number of seconds, latitude, and longitude, which country is likely to have reported a UFO sighting?</p>
+      <form action="{{ url_for('predict') }}" method="post">
+        <input type="number" name="seconds" placeholder="Seconds" required min="0" max="60">
+        <input type="text" name="latitude" placeholder="Latitude" required>
+        <input type="text" name="longitude" placeholder="Longitude" required>
+        <button type="submit" class="btn">Predict Country</button>
+      </form>
+      {% if prediction_text %}
+        <p><strong>Prediction:</strong> {{ prediction_text }}</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
